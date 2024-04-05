@@ -1,4 +1,16 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
+
+Square.propTypes = {
+  value: PropTypes.string,
+  onSquareClick: PropTypes.func.isRequired,
+};
+
+Board.propTypes = {
+  xIsNext: PropTypes.bool.isRequired,
+  squares: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onPlay: PropTypes.func.isRequired,
+};
 
 function Square({ value, onSquareClick }) {
   return (
